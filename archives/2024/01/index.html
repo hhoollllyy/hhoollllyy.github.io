@@ -13,6 +13,7 @@
 <!-- Fonts -->
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style" onload="this.onload=null, this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"></noscript>
+<script src="https://kit.fontawesome.com/0a8ea6a3d9.js" crossorigin="anonymous"></script>
 
 
 
@@ -35,6 +36,10 @@
                 s.parentNode.insertBefore(hm, s);
             })();
         </script>
+    
+    
+        <!-- busuanzi Analytics -->
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     
 
 
@@ -128,16 +133,45 @@
 
                 <div class="site-footer gt-c-content-color-first">
     <div class="footer-main">
-        <!-- 建议保留版权信息或者添加主题信息到友链，感谢您的理解 -->
-        <!-- 文件位置：layout/_includes/footer.ejs -->
-        <span style="text-align: right; float: right;">Theme <a 
-            href="https://github.com/renbaoshuo/hexo-theme-pure" target="_blank">Pure</a> | Powered by <a 
-            href="https://hexo.io" target="_blank">Hexo</a></span>
-        <span style="text-align: left;">Footer HTML
+        <span>本站建站于：<span id="site_createtime">
+                2024-01-01 00:00:00
+            </span></span>
+        &nbsp; | &nbsp;
+        <span id="sitetime">...</span>
+        &nbsp; | &nbsp;
+        <span id="busuanzi_container_site_pv">总PV量<span id="busuanzi_value_site_pv"></span>次</span>
+        &nbsp; | &nbsp;
+        <span id="busuanzi_container_site_uv">总UV量<span id="busuanzi_value_site_uv"></span>次</span>
+    </div>
+    <div class="footer-main">
+        <span style="text-align: left; float: left;">Footer HTML
 </span>
+        <span style="text-align: right; float: right;">Theme
+            <a href="https://github.com/renbaoshuo/hexo-theme-pure" target="_blank">Pure</a>
+            | Powered by
+            <a href="https://hexo.io" target="_blank">Hexo</a>
+        </span>
     </div>
 </div>
-
+<script>
+    var SiteCreateTime = Date.parse('2024-01-01 00:00:00');
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var diff = new Date().getTime() - SiteCreateTime;
+        var diffYears = Math.floor(diff / 31536000000); diff %= 31536000000;
+        var diffDays = Math.floor(diff / 86400000); diff %= 86400000;
+        var diffHours = Math.floor(diff / 3600000); diff %= 3600000;
+        var diffMinutes = Math.floor(diff / 60000); diff %= 60000;
+        var diffSeconds = Math.floor(diff / 1000);
+        document.getElementById("sitetime").innerHTML = "已运行了 "
+            + "<font style='color:#FE3C65;font-weight:bold'>" + diffYears + "</font>" + " 年 "
+            + "<font style='color:#FFA500;font-weight:bold'>" + diffDays + "</font>" + " 天 "
+            + "<font style='color:#1DBF97;font-weight:bold'>" + diffHours + "</font>" + " 小时 "
+            + "<font style='color:#8A2BE2;font-weight:bold'>" + diffMinutes + "</font>" + " 分 "
+            + "<font style='color:#007EC6;font-weight:bold'>" + diffSeconds + "</font>" + " 秒 ";
+    }
+    siteTime();
+</script>
             </div>
         </div>
     </body>
