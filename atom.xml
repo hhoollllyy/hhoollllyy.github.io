@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Holly屋</title>
+  
+  
+  <link href="https://hhoollllyy.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://hhoollllyy.github.io/"/>
+  <updated>2024-01-27T11:27:31.290Z</updated>
+  <id>https://hhoollllyy.github.io/</id>
+  
+  <author>
+    <name>Holly</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hello</title>
+    <link href="https://hhoollllyy.github.io/2024/01/27/hello/"/>
+    <id>https://hhoollllyy.github.io/2024/01/27/hello/</id>
+    <published>2024-01-27T11:27:31.000Z</published>
+    <updated>2024-01-27T11:27:31.290Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+</feed>
